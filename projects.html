@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects | Jayant Bakolia</title>
+  <meta name="description" content="Detailed project evidence for Jayant Bakolia's CPD portfolio, including goals, contributions, media, and links." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="container navbar"><a class="brand" href="index.html"><span class="brand-mark">JB</span><span>Jayant Bakolia</span></a><button class="mobile-toggle" data-menu-toggle aria-expanded="false" aria-label="Open menu">Menu</button><nav class="nav-links" data-nav><a href="index.html">Home</a><a class="active" href="projects.html">Projects</a><a href="cv.html">CV</a><a href="index.html#contact">Contact</a></nav></div></header>
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Project portfolio</p>
+        <h1>Goals, contributions, evidence.</h1>
+        <p class="lead">
+          A selection of robotics, simulation, software, and engineering projects demonstrating my technical development across autonomous systems, mechanical design, numerical modelling, and applied programming.
+          Each project includes the problem context, project goal, my specific contribution, tools used, outcomes achieved, and supporting evidence such as reports, repositories, images, videos, or demonstrations.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="chromiq"><div class="container">
+      <div class="section-header"><div><p class="eyebrow">Robotics systems design</p><h2>VISOR: Visual Intelligent System for Object detection and Retrieval</h2></div><p>Team project using a Leo Rover 1.8 platform, low-mounted LiDAR, RGB-D camera, myCobot 280 manipulator, NUC, ROS 2 Jazzy, Gazebo, Nav2, and object-detection logic.</p></div>
+      <div class="media-grid">
+        <div class="media-frame"><img src="assets/img/leo-rover.png" alt="VISOR rover"></div>
+        <div class="grid">
+          <article class="card"><h3>Project goal</h3><p>Design and demonstrate an autonomous robot that searches an arena, detects coloured objects, retrieves them, returns to the start area, and places each object into a matching coloured bin.</p></article>
+          <article class="card"><h3>My contribution</h3><ul><li>Led SLAM, navigation, and exploration development for the Leo Rover.</li><li>Integrated Nav2 behaviour with map, TF, goal-pose logic, and camera-informed navigation.</li><li>Developed and debugged exploration scripts using occupancy grids and Nav2 action clients.</li><li>Identified system-integration issue caused by conflicting manipulator and rover topic names.</li><li>Prepared demonstration evidence and explained the limits of full mission integration.</li></ul></article>
+          <article class="card"><h3>Evidence links</h3><div class="evidence-list"><a class="evidence-link" href="https://github.com/allanbissac/V.I.S.O.R." target="_blank" rel="noopener">GitHub repository</a><a class="evidence-link" href="assets/docs/FDR.pdf">Final design report</a><a class="evidence-link" href="assets/videos/Promo-video.mp4">Demo video</a></div></article>
+        </div>
+      </div>
+      <div class="grid three" style="margin-top:1rem">
+        <div class="media-frame">
+          <img src="assets/img/gazebo.png" alt="Gazebo simulation">
+          <div class="media-caption">Gazebo simulation</div>
+        </div>
+        <div class="media-frame">
+          <img src="assets/img/navigation.png" alt="RViz map">
+          <div class="media-caption">Online RViz map generation</div>
+        </div>
+        <div class="media-frame">
+          <img src="assets/img/object-detection.png" alt="Object detection">
+          <div class="media-caption">Real time object detection</div>
+        </div>
+      </div>
+    </div></section>
+
+    <section class="section project-detail" id="payload-sled">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Mechanical Design</p>
+            <h2>Leo Rover Payload Sled Design</h2>
+          </div>
+          <p>
+            A modular mechanical payload architecture designed to integrate sensing,
+            computation, and manipulation hardware onto the Leo Rover platform.
+          </p>
+        </div>
+
+        <div class="media-grid">
+          <div class="media-frame">
+            <img src="assets/img/payload-sled.png" alt="CAD assembly of the Leo Rover payload sled">
+            <div class="media-caption">
+              Full CAD assembly showing the payload sled mounted on the Leo Rover.
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Project goal</h3>
+            <p>
+              The goal was to design a structurally sound, modular, and reversible
+              payload sled for the Leo Rover. The sled needed to support the LiDAR,
+              RGB-D camera, manipulator arm, Intel NUC, and cable routing while
+              preserving sensor fields of view, access to the rover, and overall system
+              stability.
+            </p>
+
+            <h3>My contribution</h3>
+            <p>
+              I completed the full mechanical design and analysis of the payload sled.
+              This included the four-plate architecture, component placement strategy,
+              LiDAR adapter integration, NUC holder, camera/manipulator mounting
+              arrangement, connector design, plate thickness selection, manufacturability
+              justification, and structural validation using finite element analysis.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid two">
+          <div class="card">
+            <h3>Design approach</h3>
+            <ul>
+              <li>Developed a four-plate architecture: front bottom, rear bottom, front top, and rear top plates.</li>
+              <li>Placed the LiDAR low at the front to improve obstacle and bin detection.</li>
+              <li>Mounted the manipulator and RGB–D camera on the front top plate for direct front-side pickup.</li>
+              <li>Moved the Intel NUC to the rear top plate to improve packaging, balance, and LiDAR visibility.</li>
+              <li>Designed custom I-beam connectors, adapters, and mounting interfaces for 3D printing.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Analysis and validation</h3>
+            <ul>
+              <li>Selected a 5 mm plate thickness based on fastener compatibility, print robustness, and stiffness requirements.</li>
+              <li>Used conservative loading assumptions for the manipulator and NUC to provide design margin.</li>
+              <li>Performed static structural analysis to check stress distribution, displacement, stiffness, and safety factor.</li>
+              <li>Verified that the design supported the mounted payload without excessive deformation.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card highlight">
+          <h3>Outcome</h3>
+          <p>
+            The final payload sled provided a modular and manufacturable mounting
+            architecture for the complete autonomous mobile manipulation system. It
+            separated the front sensing/manipulation module from the rear compute
+            module, improved access and maintainability, reduced sensor obstruction,
+            and provided a structurally validated platform for final integration.
+          </p>
+
+          <div class="tag-list">
+            <span class="tag">Mechanical Design</span>
+            <span class="tag">CAD</span>
+            <span class="tag">FEA</span>
+            <span class="tag">Payload Integration</span>
+            <span class="tag">3D Printing</span>
+            <span class="tag">Robotics Hardware</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="engineering"><div class="container">
+      <div class="section-header"><div><p class="eyebrow">Engineering simulation</p><h2>Simulation-led engineering evidence</h2></div><p>These projects show transferable competencies in modelling, numerical methods, experimental reasoning, and engineering communication.</p></div>
+      <div class="grid two">
+        <article class="card"><h3>Monte Carlo model for grain boundary movement</h3><p><strong>Goal:</strong> Predict grain boundary movement in steel during annealing using a Monte-Carlo Potts model.</p><p><strong>My contribution:</strong> Developed a C++ simulation model using crystallographic texture and Kernel Average Misorientation as inputs, supporting a 25% reduction in annealing time and an estimated impact of over 12 crores.</p><div class="tag-list"><span class="tag">C++</span><span class="tag">Monte Carlo</span><span class="tag">Materials modelling</span></div></article>
+        <article class="card"><h3>CFD & MHD electromagnetic stirring model</h3><p><strong>Goal:</strong> Model electromagnetic stirring behaviour to disrupt dendrite formation during steel casting.</p><p><strong>My contribution:</strong> Built a multiphysics simulation workflow combining CFD and electromagnetic analysis to support process understanding and new product development decisions.</p><div class="tag-list"><span class="tag">CFD</span><span class="tag">MHD</span><span class="tag">Simulation</span></div></article>
+        <article class="card"><h3>Parallel Canny Edge Detector</h3><p><strong>Goal:</strong> Implement and accelerate image-processing computation using parallel programming.</p><p><strong>My contribution:</strong> Developed a C++/OpenMP implementation and achieved significant speedup, demonstrating algorithmic optimisation and parallel computing ability.</p><div class="tag-list"><span class="tag">C++</span><span class="tag">OpenMP</span><span class="tag">Computer vision</span></div></article>
+        <article class="card"><h3>Moldboard retention screw system</h3><p><strong>Goal:</strong> Replace a nut-bolt assembly with a cam-based retention mechanism to reduce service and assembly time.</p><p><strong>My contribution:</strong> Modelled the cam profile, achieved 176 kN preload, incorporated non-linear Belleville spring behaviour, and supported a more serviceable product concept.</p><div class="tag-list"><span class="tag">Product design</span><span class="tag">Creo</span><span class="tag">Mechanism design</span></div></article>
+      </div>
+    </div></section>
+  </main>
+  <footer class="footer"><div class="container footer-grid"><span>© 2026 Jayant Bakolia</span><span><a href="index.html">Home</a> · <a href="cv.html">CV</a></span></div></footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
